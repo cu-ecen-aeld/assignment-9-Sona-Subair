@@ -1,0 +1,27 @@
+#! /bin/sh
+
+case "$1" in
+	start)
+		echo "Starting ldd moulde"
+		/usr/bin/scull_load
+		/etc/init.d/scull_load scull
+		/etc/init.d/module_load faulty
+		/usr/bin/module_load faulty
+		modprobe hello
+		;;
+	
+	stop)
+		echo "Stopping LDD module"
+		/usr/bin/scull_unload
+		/etc/init.d/scull_unload scull
+		/eyc/init.d/module_unload faulty
+		/usr/bin/module_unload faulty
+		rmmod hello
+		;;
+	
+	*)
+		echo "Usage: $0{start|stop}"
+	exit 1
+	
+esac
+exit 0	

@@ -1,6 +1,6 @@
 ##############################################################
 #
-# AESD-ASSIGNMENTS
+#LDD
 #
 ##############################################################
 
@@ -12,7 +12,7 @@ LDD_SITE ='git@github.com:cu-ecen-aeld/assignment-7-Sona-Subair.git'
 LDD_SITE_METHOD = git
 LDD_GIT_SUBMODULES = YES
 LDD_MODULE_SUBDIRS = scull
-LDD_MODULE_SUBDIRS += misc_modules
+LDD_MODULE_SUBDIRS += misc-modules
 
 
 define LDD_INSTALL_TARGET_CMDS
@@ -22,5 +22,5 @@ define LDD_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 $(@D)/misc-modules/module_unload $(TARGET_DIR)/usr/bin	
 endef
 
-$(eval $(kernal-module))
+$(eval $(kernel-module))
 $(eval $(generic-package))
