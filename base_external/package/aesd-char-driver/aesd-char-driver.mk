@@ -4,7 +4,7 @@
 #
 ##############################################################
 
-AESD_CHAR_DRIVER_VERSION = '3a2b8d274a573a2d4d1167bd00f90cffbe8ba92f'
+AESD_CHAR_DRIVER_VERSION = '48d98ec7b66b635dd7e25baa067a52443d879485'
 # Note: Be sure to reference the *ssh* repository URL here (not https) to work properly
 # with ssh keys and the automated build/test system.
 # Your site should start with git@github.com:
@@ -20,5 +20,5 @@ define AESD_CHAR_DRIVER_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 $(@D)/aesd-char-driver/aesdchar_unload $(TARGET_DIR)/etc/init.d		
 endef
 
-$(eval $(kernel))
+$(eval $(kernel-module))
 $(eval $(generic-package))
