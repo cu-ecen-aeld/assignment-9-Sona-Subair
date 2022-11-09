@@ -14,7 +14,7 @@ case "$1" in
 		echo "Stopping LDD module"
 		/usr/bin/scull_unload
 		/etc/init.d/scull_unload scull
-		/eyc/init.d/module_unload faulty
+		/etc/init.d/module_unload faulty
 		/usr/bin/module_unload faulty
 		rmmod hello
 		;;
